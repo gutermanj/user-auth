@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Load Front End Frameworks! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <!-- ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+	  <div class='container-fluid'>
+		<nav class='teal'>
+			<div class="nav-wrapper">
+			  <a href="/" class="brand-logo">User Auth 3000</a>
+				  <ul id="nav-mobile" class="right hide-on-med-and-down">
+				    <li><a href="/edit">Edit Account</a></li>
+				    <li><a href="/logout">Logout</a></li>
+				  </ul>
+			</div>
+		</nav>
+
+		<div class='main-content'>
+		    <h3><%= title %></h3>
+		    <h6>Welcome to <%= title %></h6>
+		    <b>Welcome Back: <%= user.first_name %></b>
+	    </div>
+
+	    <div class='row'>
+		    <div class='action-buttons col s12 align center'>
+		    	<a class="waves-effect waves-light btn action-button" href='/users'><i class="material-icons left">people</i>Show All Users</a>
+		    	<a class="waves-effect waves-light btn action-button action-button-right" href='/edit'><i class="material-icons left">edit</i>Edit My Account</a>
+		    </div>
+	    </div>
+
+	   </div>
+
+  </body>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+</html>

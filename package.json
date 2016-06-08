@@ -1,0 +1,29 @@
+{
+  "name": "user_auth_exercise",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "~1.13.2",
+    "client-sessions": "^0.7.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "express-session": "^1.13.0",
+    "mongodb": "^2.1.21",
+    "mongoose": "^4.4.20",
+    "morgan": "~1.6.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Load Front End Frameworks! -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <nav class='teal'>
+                <div class="nav-wrapper">
+                  <a href="/" class="brand-logo">User Auth 3000</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+              </nav>
+    <div class='container'>
+      <div class='row'>
+          <div class='col s12'>
+              <h3 class='align center'>Edit Your Account</h3>
+
+              <form action='/edit' method='POST'>
+                
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <input name="first_name" type="text" class="validate" value='<%= user.first_name %>' required>
+                    <label for="first_name">First Name</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <input name="last_name" type="text" class="validate" value='<%= user.last_name %>' required>
+                    <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <input name="country" type="text" class="validate" value='<%= user.country %>' required>
+                    <label for="country">Country</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <input name="state" type="text" class="validate" value='<%= user.state %>' required>
+                    <label for="state">State</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <input name="city" type="text" class="validate" value='<%= user.city %>' required>
+                    <label for="city">City</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <input name="new_password" type="password" class="validate">
+                    <label for="new_password">New Password</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <input name="password" type="password" class="validate" required>
+                    <label for="password">Confirm Password</label>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <button class='waves-effect waves-light btn col s12' type='submit'>Edit</button>
+                  </div>
+                </div>
+                <hr>
+              </form>
+
+              <div class="row">
+                  <div class="input-field col s8 push-s2">
+                    <form action='/delete' method='POST'>
+                      <input name='email' type='text' value='<%= user.email %>'hidden></input>
+                      <button class='waves-effect waves-light btn col s12 red darken-4' type='submit' onclick="return confirm('Are you sure you would like to delete your account? You can\'t undo this.');">DELETE ACCOUNT</button>
+                    </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  </body>
+</html>
